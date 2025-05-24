@@ -51,4 +51,11 @@ module "virtual_machine" {
   }
 
   tags = var.tags
+
+  lifecycle {
+    prevent_destroy = true
+    ignore_changes  = [tags["Last Backup"], identity]
+  }
+
+
 }
