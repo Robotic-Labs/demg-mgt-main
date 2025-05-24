@@ -21,7 +21,7 @@ module "virtual_network" {
 
 module "virtual_machine" {
   source  = "Azure/avm-res-compute-virtualmachine/azurerm"
-  version = "0.18.1"
+  version = "0.19.1"
 
   resource_group_name        = local.resource_group_name
   os_type                    = "linux"
@@ -51,11 +51,5 @@ module "virtual_machine" {
   }
 
   tags = var.tags
-
-  lifecycle {
-    prevent_destroy = true
-    ignore_changes  = [tags["Last Backup"], identity]
-  }
-
-
 }
+
