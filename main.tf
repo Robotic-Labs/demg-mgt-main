@@ -60,5 +60,14 @@ module "virtual_machine" {
   }
 
   tags = var.tags
+<<<<<<< HEAD
 
 }
+=======
+  lifecycle {
+    ignore_changes = [
+      virtual_machine
+    ]
+  }
+}
+>>>>>>> ce60060eb6013d12b5f6c673faaf7380620d84e5
