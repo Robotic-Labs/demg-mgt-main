@@ -33,13 +33,10 @@ module "virtual_machine" {
 
   extensions = {
     AzurePolicyforLinux = {
-      name                       = "AzurePolicyforLinux"
-      publisher                  = "Microsoft.GuestConfiguration"
-      type                       = "ConfigurationforLinux"
-      type_handler_version       = "1.26.89"
-      auto_upgrade_minor_version = true
-      settings                   = "{}"
-      protected_settings         = "{}"
+      name                 = "AzurePolicyforLinux"
+      publisher            = "Microsoft.GuestConfiguration"
+      type                 = "ConfigurationforLinux"
+      type_handler_version = "1.0"
     }
   }
 
@@ -63,5 +60,9 @@ module "virtual_machine" {
   }
 
   tags = var.tags
-
+  lifecycle {
+    ignore_changes = [
+      virtual_machine
+    ]
+  }
 }
