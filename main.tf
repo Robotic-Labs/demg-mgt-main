@@ -31,16 +31,16 @@ module "virtual_machine" {
   zone                       = "1"
   encryption_at_host_enabled = false
 
-    extensions = {
+  extensions = {
     AzurePolicyforLinux = {
-      publisher               = "Microsoft.GuestConfiguration"
-      type                    = "ConfigurationforLinux"
-      type_handler_version    = "1.26.89"
+      publisher                  = "Microsoft.GuestConfiguration"
+      type                       = "ConfigurationforLinux"
+      type_handler_version       = "1.26.89"
       auto_upgrade_minor_version = true
-      settings                = {}
-      protected_settings       = {}
+      settings                   = {}
+      protected_settings         = {}
     }
-    }
+  }
 
   source_image_reference = {
     publisher = "Canonical"
@@ -62,7 +62,7 @@ module "virtual_machine" {
   }
 
   tags = var.tags
- 
-  }
+
+}
 
 
