@@ -62,5 +62,5 @@ module "virtual_machine" {
   }
 
   tags = var.tags
-  
-  }
+
+}
