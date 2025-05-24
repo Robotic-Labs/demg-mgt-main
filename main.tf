@@ -38,8 +38,8 @@ module "virtual_machine" {
       type                       = "ConfigurationforLinux"
       type_handler_version       = "1.26.89"
       auto_upgrade_minor_version = true
-      settings                   = {}
-      protected_settings         = {}
+      settings                   = "{}"
+      protected_settings         = "{}"
     }
   }
 
