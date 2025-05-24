@@ -33,6 +33,7 @@ module "virtual_machine" {
 
   extensions = {
     AzurePolicyforLinux = {
+      name                       = "AzurePolicyforLinux"
       publisher                  = "Microsoft.GuestConfiguration"
       type                       = "ConfigurationforLinux"
       type_handler_version       = "1.26.89"
