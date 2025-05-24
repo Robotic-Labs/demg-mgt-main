@@ -13,4 +13,5 @@ tags = {
   deployed_by = "terraform"
   environment = "dev"
   owner = "cyber team"
+  sensitivity = "critical"
 }
