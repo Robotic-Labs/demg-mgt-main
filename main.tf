@@ -36,11 +36,6 @@ module "virtual_machine" {
     offer     = "0001-com-ubuntu-server-jammy"
     sku       = "22_04-lts-gen2"
     version   = "latest"
-
-  lifecycle {
-  prevent_destroy = true
-  ignore_changes = [ tags["Last Backup"], identity ]
-    }
   }
 
   network_interfaces = {
@@ -56,4 +51,11 @@ module "virtual_machine" {
   }
 
   tags = var.tags
+
+  lifecycle {
+    prevent_destroy = true
+    ignore_changes  = [tags["Last Backup"], identity]
+  }
+
+
 }
